@@ -35,9 +35,9 @@ const skillCategories: { category: string; skills: Skill[] }[] = [
 
 export default function Skills() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-16 px-6">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">
+        <h2 className="text-lg font-semibold mb-6 text-center">
           Skills
         </h2>
         <div className="space-y-8">
@@ -50,10 +50,10 @@ export default function Skills() {
                 {group.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-bold tracking-wide"
+                    className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium"
                     style={{ backgroundColor: skill.bg, color: skill.text }}
                   >
-                    <skill.icon className="text-base" />
+                    <skill.icon className="text-xs" />
                     {skill.name}
                   </div>
                 ))}

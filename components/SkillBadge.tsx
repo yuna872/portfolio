@@ -39,7 +39,7 @@ export default function SkillBadge({ name }: { name: string }) {
 
   if (!skill) {
     return (
-      <span className="text-xs px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-500">
+      <span className="text-xs px-2.5 py-1  bg-neutral-100 text-neutral-500">
         {name}
       </span>
     );
@@ -49,7 +49,7 @@ export default function SkillBadge({ name }: { name: string }) {
 
   return (
     <span
-      className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-md font-medium"
+      className="inline-flex items-center gap-1 text-xs px-2.5 py-1  font-medium"
       style={{ backgroundColor: skill.bg, color: skill.text }}
     >
       <Icon className="text-xs" />

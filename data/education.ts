@@ -72,7 +72,7 @@ export const trainingCourses: TrainingCourse[] = [
     description: "웹 풀스택 개발 교육과정 수료",
     projects: [
       {
-        title: "Malang-Lab",
+        title: "말랑연구소",
         period: "2023.04 ~ 2023.05",
         description: "게임 기반 실시간 온라인 브레인스토밍",
         tags: ["TypeScript"],
@@ -80,7 +80,7 @@ export const trainingCourses: TrainingCourse[] = [
         images: ["/images/education/Malang-Lab/image-01.png"],
       },
       {
-        title: "Book-Dodum",
+        title: "북돋움",
         period: "2023.03 ~ 2023.04",
         description: "빅데이터 기반 도서 추천 & 독서모임",
         tags: ["TypeScript"],

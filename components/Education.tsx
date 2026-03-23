@@ -6,6 +6,66 @@ import {
 } from "@/data/education";
 import TimelineAccordion from "./TimelineAccordion";
 import SkillBadge from "./SkillBadge";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiMui,
+  SiReactquery,
+  SiRedux,
+  SiChakraui,
+  SiVercel,
+  SiGithub,
+  SiFigma,
+  SiJira,
+  SiNotion,
+} from "react-icons/si";
+import type { IconType } from "react-icons";
+
+type Skill = { name: string; icon: IconType; bg: string; text: string };
+
+const skillCategories: {
+  category: string;
+  rows: Skill[][];
+}[] = [
+  {
+    category: "Frontend",
+    rows: [
+      [
+        { name: "Javascript", icon: SiJavascript, bg: "#F7DF1E", text: "#323330" },
+        { name: "Typescript", icon: SiTypescript, bg: "#3178C6", text: "#FFFFFF" },
+        { name: "React", icon: SiReact, bg: "#61DAFB", text: "#20232A" },
+        { name: "Next.js", icon: SiNextdotjs, bg: "#000000", text: "#FFFFFF" },
+        { name: "React Native", icon: SiReact, bg: "#282C34", text: "#61DAFB" },
+        { name: "MUI", icon: SiMui, bg: "#007FFF", text: "#FFFFFF" },
+        { name: "Chakra UI", icon: SiChakraui, bg: "#319795", text: "#FFFFFF" },
+        { name: "React Query", icon: SiReactquery, bg: "#FF4154", text: "#FFFFFF" },
+        { name: "Zustand", icon: SiReact, bg: "#443E38", text: "#F5D77E" },
+        { name: "Redux", icon: SiRedux, bg: "#764ABC", text: "#FFFFFF" },
+      ],
+    ],
+  },
+  {
+    category: "Infra",
+    rows: [
+      [
+        { name: "Vercel", icon: SiVercel, bg: "#000000", text: "#FFFFFF" },
+      ],
+    ],
+  },
+  {
+    category: "Tools",
+    rows: [
+      [
+        { name: "Github", icon: SiGithub, bg: "#181717", text: "#FFFFFF" },
+        { name: "Figma", icon: SiFigma, bg: "#F24E1E", text: "#FFFFFF" },
+        { name: "Jira", icon: SiJira, bg: "#0052CC", text: "#FFFFFF" },
+        { name: "Notion", icon: SiNotion, bg: "#000000", text: "#FFFFFF" },
+      ],
+    ],
+  },
+];
 
 export default function Education() {
   return (
@@ -71,6 +131,34 @@ export default function Education() {
                     />
                   </div>
                 )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Skills */}
+        <div className="mb-10">
+          <h3 className="text-lg font-semibold mb-4">Skills</h3>
+          <div className="space-y-4">
+            {skillCategories.map((group) => (
+              <div key={group.category}>
+                <p className="text-sm text-neutral-400 mb-2">{group.category}</p>
+                <div className="space-y-2">
+                  {group.rows.map((row, ri) => (
+                    <div key={ri} className="flex flex-wrap gap-2">
+                      {row.map((skill) => (
+                        <span
+                          key={skill.name}
+                          className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium"
+                          style={{ backgroundColor: skill.bg, color: skill.text }}
+                        >
+                          <skill.icon className="text-xs" />
+                          {skill.name}
+                        </span>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
