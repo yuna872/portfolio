@@ -24,7 +24,20 @@ export default function Projects() {
                 className="rounded-xl border border-neutral-200 bg-white p-6 transition-shadow hover:shadow-md"
               >
                 <div className="flex items-baseline justify-between gap-4 mb-2">
-                  <h3 className="font-semibold text-lg">{project.title}</h3>
+                  <div className="flex items-baseline gap-2">
+                    <h3 className="font-semibold text-lg">{project.title}</h3>
+                    {project.category && (
+                      <span
+                        className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+                          project.category === "개인"
+                            ? "bg-neutral-100 text-neutral-500"
+                            : "bg-blue-50 text-blue-600"
+                        }`}
+                      >
+                        {project.category}
+                      </span>
+                    )}
+                  </div>
                   <span className="text-sm text-neutral-400 shrink-0">
                     {project.period}
                   </span>

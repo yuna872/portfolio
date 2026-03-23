@@ -3,6 +3,7 @@ export interface Project {
   period: string;
   description: string;
   tags: string[];
+  category?: "개인" | "외주";
   github?: string;
   institution?: string;
   role?: string;
@@ -15,6 +16,7 @@ export const projects: Project[] = [
     period: "2026.03 ~",
     description: "개인 투자자를 위한 실시간 DART 공시 알림 모바일 서비스",
     tags: ["React Native", "Expo", "NestJS", "PostgreSQL", "AWS", "Terraform"],
+    category: "개인",
     github: "https://github.com/yuna872",
     role: "1인 개발 (기획·설계·프론트·백엔드·인프라)",
     details: [
@@ -32,6 +34,7 @@ export const projects: Project[] = [
     period: "2024.12 ~ 2025.05",
     description: "카카오맵을 활용하여 신호기 상태를 실시간으로 모니터링하고, 센서를 설정 및 관리할 수 있는 통합 시스템",
     tags: ["React", "JavaScript", "Redux-Toolkit", "MUI", "React-Query"],
+    category: "외주",
     github: "https://github.com/yuna872",
     institution: "우인 미디어 테크",
     role: "프론트엔드 개발",
@@ -50,6 +53,7 @@ export const projects: Project[] = [
     period: "2024.11 ~ 2025.05",
     description: "라오스 커피 원두 생산·유통·재고·수매 관리 업무의 전산화를 위한 맞춤형 ERP 시스템",
     tags: ["React", "TypeScript", "Vite", "MUI", "React-Query", "i18next"],
+    category: "외주",
     github: "https://github.com/yuna872",
     institution: "태즈로스팅",
     role: "프론트엔드 개발 / PM",
