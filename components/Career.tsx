@@ -1,5 +1,6 @@
 import { careers } from "@/data/career";
 import TimelineAccordion from "./TimelineAccordion";
+import SkillBadge from "./SkillBadge";
 
 export default function Career() {
   return (
@@ -27,16 +28,11 @@ export default function Career() {
                     <div>
                       <div className="flex flex-wrap gap-2 mb-3">
                         {project.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-xs px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-500"
-                          >
-                            {tag}
-                          </span>
+                          <SkillBadge key={tag} name={tag} />
                         ))}
                       </div>
                       {project.details.length > 0 && (
-                        <ul className="text-sm text-neutral-600 space-y-1.5">
+                        <ul className="text-sm text-neutral-600 space-y-1.5 mb-4">
                           {project.details.map((detail, i) => (
                             <li key={i} className="flex gap-2">
                               <span className="text-neutral-300">·</span>
@@ -44,6 +40,33 @@ export default function Career() {
                             </li>
                           ))}
                         </ul>
+                      )}
+                      {project.subProjects && project.subProjects.length > 0 && (
+                        <div className="space-y-6">
+                          {project.subProjects.map((sub) => (
+                            <div
+                              key={sub.title}
+                              className="border-l-2 border-neutral-200 pl-4"
+                            >
+                              <h4 className="font-semibold text-sm">
+                                {sub.title}
+                              </h4>
+                              <p className="text-xs text-neutral-400 mb-2">
+                                {sub.description}
+                              </p>
+                              {sub.details.length > 0 && (
+                                <ul className="text-sm text-neutral-600 space-y-1.5">
+                                  {sub.details.map((detail, i) => (
+                                    <li key={i} className="flex gap-2">
+                                      <span className="text-neutral-300">·</span>
+                                      {detail}
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          ))}
+                        </div>
                       )}
                     </div>
                   ),

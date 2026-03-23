@@ -77,6 +77,7 @@ export const trainingCourses: TrainingCourse[] = [
         description: "게임 기반 실시간 온라인 브레인스토밍",
         tags: ["TypeScript"],
         github: "https://github.com/yuna872",
+        images: ["/images/education/Malang-Lab/image-01.png"],
       },
       {
         title: "Book-Dodum",
@@ -84,6 +85,11 @@ export const trainingCourses: TrainingCourse[] = [
         description: "빅데이터 기반 도서 추천 & 독서모임",
         tags: ["TypeScript"],
         github: "https://github.com/yuna872",
+        images: [
+          "/images/education/Book-Dodum/image-01.png",
+          "/images/education/Book-Dodum/image-02.gif",
+          "/images/education/Book-Dodum/image-03.gif",
+        ],
       },
       {
         title: "ZUM:GO",
@@ -91,6 +97,7 @@ export const trainingCourses: TrainingCourse[] = [
         description: "실시간 화상 줌 게임 플랫폼",
         tags: ["React", "JavaScript", "WebRTC", "Websocket", "Redux-Toolkit"],
         github: "https://github.com/yuna872",
+        images: ["/images/education/ZUM:GO/image-01.gif"],
       },
       {
         title: "Movie Spotter",
@@ -98,6 +105,11 @@ export const trainingCourses: TrainingCourse[] = [
         description: "영화 검색 및 추천 서비스",
         tags: ["Vue.js", "JavaScript"],
         github: "https://github.com/yuna872",
+        images: [
+          "/images/education/Movie Spotter/image-01.png",
+          "/images/education/Movie Spotter/image-02.png",
+          "/images/education/Movie Spotter/image-03.png",
+        ],
       },
     ],
   },

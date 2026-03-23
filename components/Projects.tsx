@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { projects } from "@/data/projects";
+import SkillBadge from "./SkillBadge";
 
 export default function Projects() {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -101,12 +102,7 @@ export default function Projects() {
                       )}
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-xs px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-500"
-                          >
-                            {tag}
-                          </span>
+                          <SkillBadge key={tag} name={tag} />
                         ))}
                       </div>
                       {project.github && (

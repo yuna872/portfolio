@@ -5,6 +5,7 @@ import {
   languages,
 } from "@/data/education";
 import TimelineAccordion from "./TimelineAccordion";
+import SkillBadge from "./SkillBadge";
 
 export default function Education() {
   return (
@@ -39,14 +40,21 @@ export default function Education() {
                           <div>
                             <div className="flex flex-wrap gap-2 mb-3">
                               {project.tags.map((tag) => (
-                                <span
-                                  key={tag}
-                                  className="text-xs px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-500"
-                                >
-                                  {tag}
-                                </span>
+                                <SkillBadge key={tag} name={tag} />
                               ))}
                             </div>
+                            {project.images && project.images.length > 0 && (
+                              <div className="flex gap-3 overflow-x-auto pb-2 mb-3">
+                                {project.images.map((src, i) => (
+                                  <img
+                                    key={i}
+                                    src={src}
+                                    alt={`${project.title} screenshot ${i + 1}`}
+                                    className="rounded-lg border border-neutral-200 max-h-48 object-contain shrink-0"
+                                  />
+                                ))}
+                              </div>
+                            )}
                             {project.github && (
                               <a
                                 href={project.github}

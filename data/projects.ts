@@ -8,6 +8,7 @@ export interface Project {
   institution?: string;
   role?: string;
   details?: string[];
+  images?: string[];
 }
 
 export const projects: Project[] = [
