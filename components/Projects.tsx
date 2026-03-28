@@ -1,5 +1,4 @@
 import { projects } from "@/data/projects";
-import SkillBadge from "./SkillBadge";
 
 export default function Projects() {
   return (
@@ -64,7 +63,12 @@ export default function Projects() {
                     )}
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
-                        <SkillBadge key={tag} name={tag} />
+                        <span
+                          key={tag}
+                          className="text-xs px-2.5 py-1 bg-neutral-100 text-neutral-500"
+                        >
+                          {tag}
+                        </span>
                       ))}
                     </div>
                     {project.github && (

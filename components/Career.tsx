@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { careers } from "@/data/career";
 import TimelineAccordion from "./TimelineAccordion";
-import SkillBadge from "./SkillBadge";
 
 export default function Career() {
   return (
@@ -28,7 +28,12 @@ export default function Career() {
                     <div>
                       <div className="flex flex-wrap gap-2 mb-3">
                         {project.tags.map((tag) => (
-                          <SkillBadge key={tag} name={tag} />
+                          <span
+                            key={tag}
+                            className="text-xs px-2.5 py-1 bg-neutral-100 text-neutral-500"
+                          >
+                            {tag}
+                          </span>
                         ))}
                       </div>
                       {project.details.length > 0 && (
@@ -40,6 +45,24 @@ export default function Career() {
                             </li>
                           ))}
                         </ul>
+                      )}
+                      {project.images && project.images.length > 0 && (
+                        <div className="flex gap-3 overflow-x-auto pb-2 mt-3 scrollbar-hide">
+                          {project.images.map((src) => (
+                            <div
+                              key={src}
+                              className="relative w-40 shrink-0 rounded-lg overflow-hidden border border-neutral-100 shadow-sm"
+                            >
+                              <Image
+                                src={src}
+                                alt=""
+                                width={320}
+                                height={640}
+                                className="w-full h-auto"
+                              />
+                            </div>
+                          ))}
+                        </div>
                       )}
                       {project.subProjects && project.subProjects.length > 0 && (
                         <div className="space-y-6">
@@ -63,6 +86,24 @@ export default function Career() {
                                     </li>
                                   ))}
                                 </ul>
+                              )}
+                              {sub.images && sub.images.length > 0 && (
+                                <div className="flex gap-3 overflow-x-auto pb-2 mt-3 scrollbar-hide">
+                                  {sub.images.map((src) => (
+                                    <div
+                                      key={src}
+                                      className="relative w-40 shrink-0 rounded-lg overflow-hidden border border-neutral-100 shadow-sm"
+                                    >
+                                      <Image
+                                        src={src}
+                                        alt=""
+                                        width={320}
+                                        height={640}
+                                        className="w-full h-auto"
+                                      />
+                                    </div>
+                                  ))}
+                                </div>
                               )}
                             </div>
                           ))}

@@ -5,7 +5,6 @@ import {
   languages,
 } from "@/data/education";
 import TimelineAccordion from "./TimelineAccordion";
-import SkillBadge from "./SkillBadge";
 import {
   SiReact,
   SiNextdotjs,
@@ -100,7 +99,12 @@ export default function Education() {
                           <div>
                             <div className="flex flex-wrap gap-2 mb-3">
                               {project.tags.map((tag) => (
-                                <SkillBadge key={tag} name={tag} />
+                                <span
+                                  key={tag}
+                                  className="text-xs px-2.5 py-1 bg-neutral-100 text-neutral-500"
+                                >
+                                  {tag}
+                                </span>
                               ))}
                             </div>
                             {project.images && project.images.length > 0 && (
