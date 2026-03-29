@@ -1,3 +1,4 @@
+import ImageGallery from "./ImageGallery";
 import {
   educations,
   trainingCourses,
@@ -87,6 +88,16 @@ export default function Education() {
                 <p className="text-sm text-neutral-500 mt-0.5">
                   {course.description} ({course.hours})
                 </p>
+                {course.awards && course.awards.length > 0 && (
+                  <ul className="mt-1.5 ml-4">
+                    {course.awards.map((award) => (
+                      <li key={award} className="text-sm text-neutral-400 flex gap-1.5">
+                        <span>🏆</span>
+                        {award}
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 {course.projects && course.projects.length > 0 && (
                   <div className="mt-4 ml-2">
                     <TimelineAccordion
@@ -107,17 +118,27 @@ export default function Education() {
                                 </span>
                               ))}
                             </div>
+                            {project.role && (
+                              <p className="text-sm text-neutral-500 mb-3">
+                                <span className="text-neutral-400">역할</span>{" "}
+                                {project.role}
+                              </p>
+                            )}
+                            {project.details && project.details.length > 0 && (
+                              <ul className="text-sm text-neutral-600 space-y-1.5 mb-3">
+                                {project.details.map((detail, i) => {
+                                  const isSub = detail.startsWith("- ");
+                                  return (
+                                    <li key={i} className={`flex gap-2${isSub ? " ml-4 text-neutral-400" : ""}`}>
+                                      <span className={isSub ? "text-neutral-400" : "text-neutral-500"}>{isSub ? "-" : "·"}</span>
+                                      {isSub ? detail.slice(2) : detail}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            )}
                             {project.images && project.images.length > 0 && (
-                              <div className="flex gap-3 overflow-x-auto pb-2 mb-3">
-                                {project.images.map((src, i) => (
-                                  <img
-                                    key={i}
-                                    src={src}
-                                    alt={`${project.title} screenshot ${i + 1}`}
-                                    className="rounded-lg border border-neutral-200 max-h-48 object-contain shrink-0"
-                                  />
-                                ))}
-                              </div>
+                              <ImageGallery images={project.images} />
                             )}
                             {project.github && (
                               <a

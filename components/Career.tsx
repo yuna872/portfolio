@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { careers } from "@/data/career";
 import TimelineAccordion from "./TimelineAccordion";
+import ImageGallery from "./ImageGallery";
 
 export default function Career() {
   return (
@@ -17,6 +17,11 @@ export default function Career() {
                   {career.department && ` · ${career.department}`} ·{" "}
                   {career.period}
                 </p>
+                {career.summary && (
+                  <p className="text-sm text-neutral-400 mt-2">
+                    {career.summary}
+                  </p>
+                )}
               </div>
               <TimelineAccordion
                 items={career.projects.map((project) => ({
@@ -38,31 +43,19 @@ export default function Career() {
                       </div>
                       {project.details.length > 0 && (
                         <ul className="text-sm text-neutral-600 space-y-1.5 mb-4">
-                          {project.details.map((detail, i) => (
-                            <li key={i} className="flex gap-2">
-                              <span className="text-neutral-300">·</span>
-                              {detail}
-                            </li>
-                          ))}
+                          {project.details.map((detail, i) => {
+                            const isSub = detail.startsWith("- ");
+                            return (
+                              <li key={i} className={`flex gap-2${isSub ? " ml-4 text-neutral-400" : ""}`}>
+                                <span className={isSub ? "text-neutral-400" : "text-neutral-500"}>{isSub ? "-" : "·"}</span>
+                                {isSub ? detail.slice(2) : detail}
+                              </li>
+                            );
+                          })}
                         </ul>
                       )}
                       {project.images && project.images.length > 0 && (
-                        <div className="flex gap-3 overflow-x-auto pb-2 mt-3 scrollbar-hide">
-                          {project.images.map((src) => (
-                            <div
-                              key={src}
-                              className="relative w-40 shrink-0 rounded-lg overflow-hidden border border-neutral-100 shadow-sm"
-                            >
-                              <Image
-                                src={src}
-                                alt=""
-                                width={320}
-                                height={640}
-                                className="w-full h-auto"
-                              />
-                            </div>
-                          ))}
-                        </div>
+                        <ImageGallery images={project.images} />
                       )}
                       {project.subProjects && project.subProjects.length > 0 && (
                         <div className="space-y-6">
@@ -88,22 +81,7 @@ export default function Career() {
                                 </ul>
                               )}
                               {sub.images && sub.images.length > 0 && (
-                                <div className="flex gap-3 overflow-x-auto pb-2 mt-3 scrollbar-hide">
-                                  {sub.images.map((src) => (
-                                    <div
-                                      key={src}
-                                      className="relative w-40 shrink-0 rounded-lg overflow-hidden border border-neutral-100 shadow-sm"
-                                    >
-                                      <Image
-                                        src={src}
-                                        alt=""
-                                        width={320}
-                                        height={640}
-                                        className="w-full h-auto"
-                                      />
-                                    </div>
-                                  ))}
-                                </div>
+                                <ImageGallery images={sub.images} />
                               )}
                             </div>
                           ))}
