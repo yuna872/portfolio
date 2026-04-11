@@ -242,11 +242,11 @@ export default function Education() {
                 {edu.major && (
                   <p className="text-sm text-neutral-500 mt-0.5">{edu.major}</p>
                 )}
-                {edu.gpa && (
+                {/* {edu.gpa && (
                   <p className="text-sm text-neutral-400 mt-0.5">
                     GPA {edu.gpa}
                   </p>
-                )}
+                )} */}
               </div>
             ))}
           </div>
