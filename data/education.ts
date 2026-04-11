@@ -75,7 +75,7 @@ export const trainingCourses: TrainingCourse[] = [
         description: "게임 기반 실시간 온라인 브레인스토밍 플랫폼",
         tags: ["Next.js", "TypeScript", "WebSocket", "Redux-Toolkit", "Tailwind CSS"],
         role: "프론트엔드 개발",
-        github: "https://github.com/yuna872",
+        github: "https://github.com/yuna872/Malang-Lab",
         images: [
           "/images/education/Malang-Lab/image-01.png",
           "/images/education/Malang-Lab/main.gif",
@@ -96,7 +96,7 @@ export const trainingCourses: TrainingCourse[] = [
         description: "빅데이터 기반 도서 추천 및 독서 모임 서비스",
         tags: ["React", "TypeScript", "Styled-Components", "Redux-Toolkit"],
         role: "프론트엔드 개발",
-        github: "https://github.com/yuna872",
+        github: "https://github.com/yuna872/Book-Dodum",
         images: [
           { src: "/images/education/Book-Dodum/image-01.png", type: "mobile" },
           { src: "/images/education/Book-Dodum/image-02.gif", type: "mobile" },
@@ -114,7 +114,7 @@ export const trainingCourses: TrainingCourse[] = [
         description: "WebRTC 기반 라이브 중고 거래 플랫폼",
         tags: ["React", "JavaScript", "WebRTC", "WebSocket", "Redux-Toolkit"],
         role: "프론트엔드 개발",
-        github: "https://github.com/yuna872",
+        github: "https://github.com/yuna872/Zumgo",
         images: [
           { src: "/images/education/ZUM:GO/image-01.gif", type: "mobile" },
           { src: "/images/education/ZUM:GO/auction.png", type: "mobile" },
@@ -133,7 +133,6 @@ export const trainingCourses: TrainingCourse[] = [
         description: "Open API와 외부 데이터를 활용한 영화 추천 및 커뮤니티 서비스",
         tags: ["Vue.js", "JavaScript"],
         role: "프론트엔드 개발",
-        github: "https://github.com/yuna872",
         images: [
           "/images/education/Movie Spotter/image-01.png",
           "/images/education/Movie Spotter/image-02.png",
@@ -162,7 +161,6 @@ export const trainingCourses: TrainingCourse[] = [
         description: "마시는 차 추천 웹 서비스",
         tags: ["HTML/CSS", "JavaScript"],
         role: "프론트엔드 개발",
-        github: "https://github.com/yuna872",
         details: [
           "차 목록 및 상세 정보 조회 기능 구현",
           "차 정보 필터링 및 검색 기능 구현",

@@ -34,7 +34,6 @@ export const projects: Project[] = [
     description: "개인 투자자를 위한 실시간 DART 공시 알림 모바일 서비스",
     tags: ["React Native", "Expo", "NestJS", "PostgreSQL", "AWS", "Terraform"],
     category: "개인",
-    github: "https://github.com/yuna872",
     role: "1인 개발 (기획·설계·프론트·백엔드·인프라)",
     details: [
       "React Native(Expo) 기반 모바일 앱 개발 (React Query + Zustand)",
