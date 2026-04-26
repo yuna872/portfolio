@@ -29,10 +29,10 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "공시ON",
+    title: "공시온",
     period: "2026.03 ~",
     description: "개인 투자자를 위한 실시간 DART 공시 알림 모바일 서비스",
-    tags: ["React Native", "Expo", "NestJS", "PostgreSQL", "AWS", "Terraform"],
+    tags: ["React Native", "Expo", "NestJS", "Prisma", "PostgreSQL", "Docker"],
     category: "개인",
     role: "1인 개발 (기획·설계·프론트·백엔드·인프라)",
     details: [
@@ -41,8 +41,7 @@ export const projects: Project[] = [
       "DART Open API 연동 및 10분 주기 자동 수집 스케줄러 구현",
       "Kakao OAuth 소셜 로그인 및 JWT 인증 처리",
       "Expo Push Notifications 기반 실시간 푸시 알림",
-      "AWS ECS Fargate + RDS + ALB 인프라 구축 (Terraform)",
-      "GitHub Actions CI/CD 파이프라인 구성",
+      "NestJS + Prisma ORM 기반 REST API 설계 및 Swagger 문서화",
     ],
   },
   {

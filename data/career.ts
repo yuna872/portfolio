@@ -62,8 +62,6 @@ export const careers: Career[] = [
         details: [
           "모바일 앱(iOS/Android/Web 유니버셜), 웹 프론트엔드 개발",
           "크로스 플랫폼 이슈 해결 (Safari 팝업 차단, iOS 스플래시 버그, Android 그림자 렌더링 등 30건+)",
-          "httpOnly 세션 기반 인증 마이그레이션 및 CSRF 방어 로직 구현",
-          "JWT 토큰 리프레시 동시 요청 Deduplication 패턴 구현",
           "Zustand Persist + Hydration 타이밍 이슈 해결",
           "Firebase FCM 플랫폼별 푸시 알림 통합 (Expo + FCM)",
           "무한 스크롤 구현 (웹: IntersectionObserver, 모바일: useInfiniteQuery)",
@@ -117,7 +115,7 @@ export const careers: Career[] = [
           "React Query",
         ],
         details: [
-          "문의관리·FAQ 화면 전체 프론트엔드 개발 담당",
+          "문의관리·FAQ 화면 프론트엔드 개발 담당",
           "다중 조건 필터링·검색 UI 개발",
           "- MobX 스토어 기반으로 설계, React Query 캐싱과 연동",
           "문의 답변·댓글 작성 및 담당자 배정 워크플로우 구현",
