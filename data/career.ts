@@ -64,7 +64,6 @@ export const careers: Career[] = [
           "크로스 플랫폼 이슈 해결 (Safari 팝업 차단, iOS 스플래시 버그, Android 그림자 렌더링 등 30건+)",
           "Zustand Persist + Hydration 타이밍 이슈 해결",
           "Firebase FCM 플랫폼별 푸시 알림 통합 (Expo + FCM)",
-          "무한 스크롤 구현 (웹: IntersectionObserver, 모바일: useInfiniteQuery)",
           "검색/채팅 이벤트 디바운스 및 성능 최적화",
         ],
       },
@@ -87,7 +86,10 @@ export const careers: Career[] = [
           { src: "/images/career/쪼물락/가맹점앱/course-management.png", type: "mobile" },
         ],
         details: [
-          "가맹점 관리 모바일 앱 및 어드민 프론트엔드 개발",
+          "가맹점 관리 모바일 앱 및 어드민 프론트엔드 전반 개발",
+          "매장·코스·운영정보 등 가맹점 관리 전 화면 CRUD 구현",
+          "예약 접수·확정·취소 플로우 및 상태 관리 구현",
+          "캘린더 기반 예약 스케줄 관리 UI 구현 (시간대별 슬롯 배정, 일정 충돌 감지)",
           "Tailwind CSS → Chakra UI v3 마이그레이션 (26개 파일)",
         ],
       },
@@ -121,7 +123,7 @@ export const careers: Career[] = [
           "문의 답변·댓글 작성 및 담당자 배정 워크플로우 구현",
           "크로스 클라이언트 호환 HTML 이메일 템플릿 시스템 구축 (Outlook/Gmail 렌더링 대응)",
           "Storybook 기반 공통 컴포넌트 라이브러리 구축 (LNB, GNB, Modal, Toast 등)",
-          "- 프론트엔드 팀(6명) 전체에서 사용하는 글로벌 컴포넌트 단독 설계·개발",
+          "- 프론트엔드 팀 전체에서 사용하는 글로벌 컴포넌트 단독 설계·개발",
         ],
         images: [
           { src: "/images/career/tmax/focus-crm/faq-list.png", type: "desktop" },

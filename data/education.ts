@@ -56,7 +56,7 @@ export const languages: Language[] = [
   {
     name: "OPIc",
     level: "IM2",
-    issuer: "ACTFL",
+    issuer: "2025.03",
   },
 ];
 
