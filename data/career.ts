@@ -41,7 +41,7 @@ export const careers: Career[] = [
         title: "쪼물락 고객앱",
         period: "2025.08 ~",
         description:
-          "마사지·에스테틱 예약 플랫폼 고객용 모바일 앱 / 웹 (2026.01 출시, 유지보수 중)",
+          "마사지·에스테틱 예약 플랫폼 고객용 모바일 앱 / 웹",
         tags: [
           "React Native",
           "Expo",
@@ -97,7 +97,7 @@ export const careers: Career[] = [
   },
   {
     company: "TMAX BizAI",
-    role: "연구원",
+    role: "프론트엔드 연구원",
     department: "CRM사업본부",
     period: "2023.07 ~ 2024.11",
     summary:

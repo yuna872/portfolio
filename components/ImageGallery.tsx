@@ -23,14 +23,13 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           {desktopImages.map((img) => (
             <div
               key={img.src}
-              className="relative w-96 shrink-0 rounded-lg overflow-hidden border border-neutral-100 shadow-sm"
+              className="relative w-96 h-60 shrink-0 rounded-lg overflow-hidden border border-neutral-100 shadow-sm"
             >
               <Image
                 src={img.src}
                 alt=""
-                width={1280}
-                height={800}
-                className="w-full h-auto"
+                fill
+                className="object-cover object-top"
               />
             </div>
           ))}
