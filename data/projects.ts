@@ -69,7 +69,7 @@ export const projects: Project[] = [
     tags: ["React", "TypeScript", "Vite", "MUI", "React-Query", "i18next"],
     category: "외주",
     institution: "태즈로스팅",
-    role: "프론트엔드 개발 · PM (프론트 2 / 백엔드 1)",
+    role: "프론트엔드 개발 (프론트 2 / 백엔드 1)",
     details: [
       "Figma 기반 UI/UX 설계",
       "4단계 역할 기반 접근 제어 (총관리자, 부관리자, 면장) 및 동적 네비게이션",
